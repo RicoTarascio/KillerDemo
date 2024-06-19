@@ -56,19 +56,7 @@ const Map = ({ width, height, events = false }: GeoMercatorProps) => {
 
     const [{ transformAnim }, transformApi] = useSpring(() => ({
         transformAnim: [1, 0, 0],
-        config: {
-            duration: 3000,
-            easing: easings.easeInElastic
-        }
     }));
-
-    const [{ colorAnim }, colorApi] = useSpring(() => ({
-        colorAnim: "",
-        config: {
-            duration: 3000,
-            easing: easings.easeOutElastic
-        }
-    }))
 
     const trans = (scale: number, translateX: number, translateY: number) => `scale(${scale}) translate(${translateX}px, ${translateY}px)`
 
